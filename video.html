@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+</head>
+<body>
+    <div>
+        <button onclick="playPause()">播放/暂停</button>
+        <button onclick="showBig()">放大</button>
+        <button onclick="showSmall()">缩小</button>
+        <button onclick="showNormal()">普通</button>
+        <br>
+        <video id="video" width="400px">
+            <source src="video/marry.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 video 标签
+        </video>
+    </div>
+    Search Google: <input type="search" name="googlesearch">
+    添加您的主页: <input type="url" name="homepage">
+    <input list="browsers">
+
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    E-mail: <input type="email" name="email" autocomplete="off"><br>
+    Enter a date before 1980-01-01:
+    <input type="date" name="bday" max="1979-12-31">
+
+    <script>
+        var video = document.getElementById("video");
+        function playPause(){
+            if(video.paused){
+                video.play();
+            }else{
+                video.pause();
+            }
+
+        }
+        function showBig(){
+            video.width=500;
+        }
+        function showSmall() {
+            video.width=300;
+        }
+        function showNormal() {
+            video.width=400;
+        }
+    </script>
+</body>
+</html>

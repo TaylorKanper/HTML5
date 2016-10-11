@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var content = canvas.getContext("2d");
+    content.fillStyle = "#FF0000";
+    content.fillRect(0,0,150,75);
+    content.moveTo(0,0);
+    content.lineTo(200,100);
+    content.stroke();
+    content.font = "30px Arial";
+    content.strokeText("Hello World",10,50);
+</script>
+
+
+</body>
+</html>
